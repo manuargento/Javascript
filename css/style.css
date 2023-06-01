@@ -1,0 +1,280 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  /* ---HEADER--- */
+  header {
+    background-color: rgb(187, 59, 59);
+    color: white;
+    padding: 20px;
+    font-family: "Fruktur", cursive;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav {
+    width: 50%;
+    padding-top: 10px;
+    color: rgb(255, 255, 255);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  }
+  
+  ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 4px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  a {
+    color: rgb(255, 255, 255);
+  }
+  
+  @media screen and (max-width: 900px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+    ul {
+      font-size: 16px;
+    }
+    nav {
+      width: 100%;
+      justify-content: space-around;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+
+/* --- MERCADERIA ---*/
+
+.mercaderia {
+  text-align: center;
+  height: 100%;
+}
+.mercaderia__titulo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(169, 41, 41);
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.modal-contenedor{
+  display:flex;
+  align-items: center;
+  gap:2rem;
+}
+.img-carrito{
+  width:200px;
+  padding:20px;
+} 
+.parrafo{
+  font-weight: 900;
+  font-style: "Trebuchet MS";
+  color: rgb(169, 41, 41);;
+}
+.control-carrito{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    padding: 10px;
+}
+
+.barra-container{
+  position: relative;
+}
+.barra-input{
+  width: 50%;
+  padding: 10px;
+  padding-right: 35px;
+  border-radius: 5px 0 0 5px;
+  border: 0;
+  outline: none;
+  font-size: 1rem;
+  border: 2px solid black;
+}
+.tarjeta__img{
+  width: 90%;
+  height: 300px;;
+}
+
+.fa-solid{
+  background-color: rgba(220, 34, 34, 0.923);
+    padding: 10px;
+    position: absolute;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 0 5px 5px 0;
+    color: #e8e6f7;
+    cursor: pointer;
+}
+.fa-solid:hover{
+  background-color: #1f2022;
+}
+
+#contenedor{
+  display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 20px;
+    gap: 20px 20px;
+}
+.mercaderia__tarjeta{
+  display: flex;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(112, 110, 110, 0.686);
+    cursor: default;
+    transition: all 400ms ease;
+}
+.tarjeta__tarjeta:hover {
+  box-shadow: 5px 5px 20px rgb(53, 51, 51);
+  transform: translateY(-3%);
+}
+.tarjeta__nombre{
+  font-size: 1.6em;
+  padding: 10px 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: rgb(51, 51, 51);
+}
+.tarjeta__img img {
+  width: 90%;
+  height: 300px;
+}
+.button-outline{
+    background-color: rgba(220, 34, 34, 0.923);
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    display: inline-block;
+    text-decoration: none;
+    border: black;
+    border-radius: 4px;
+    margin: 10px;
+    transition: all 400ms ease;
+}
+.button-outline:hover {
+  background-color: rgba(51, 51, 51, 0.657);
+  color: rgb(255, 255, 255);
+}
+ 
+  @media screen and (max-width: 768px) {
+    .container {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+    }
+    .mercaderia__tarjeta {
+      display: flex;
+      flex-direction: column;
+      grid-column: auto;
+    }
+  }
+ /* --- COMPRA ---*/
+
+ .compra {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: #e8e6f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#ff0000 0.45px, #e8e6f7 0.45px);
+  background-size: 9px 9px;
+  background-position: 0 0, 10px 10px;
+  min-height: 100vh;
+}
+.titulo__inicio {
+  color: white;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(139, 0, 0, 0.337);
+  padding: 20px;
+  border-radius: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.titulo__inicio h2 {
+  font-size: 3rem;
+}
+.titulo__inicio h3 {
+  font-size: 2.3rem;
+  font-weight: 100;
+}
+
+  /* --- FOOTER ---*/
+.footer {
+  background: rgb(169, 41, 41);
+}
+
+.footer__titulo {
+  color: white;
+  padding-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.redes-sociales {
+  text-align: center;
+  padding: 8px;
+  font-size: 50px;
+}
+
+.redes-sociales a {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.redes-sociales a:hover {
+  color: #24262b;
+}
+
+@media (max-width: 767px) {
+  .redes-sociales {
+    text-align: center;
+    padding: 8px;
+    font-size: 25px;
+  }
+  .redes-sociales a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s ease;
+  }
+}
